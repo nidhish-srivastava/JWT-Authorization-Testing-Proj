@@ -3,7 +3,7 @@ import AppContext from '../context'
 import axios from 'axios'
 
 function Dashboard() {
-
+  
 const {token} = useContext(AppContext)  
 const [result,setResult] = useState("")
 const baseUrl = "http://localhost:3000"
@@ -18,12 +18,12 @@ const baseUrl = "http://localhost:3000"
             }
           })
           console.log(data)
-          setResult(`${data.msg} , Chl abb tuu meri gaand maaar skta hai`)
+          setResult(`${data.msg} , Now do whatever u want to`)
         } 
        catch (error) {
          localStorage.removeItem('token')
           // console.log(error.message)
-          setResult("Bsdk pehle login kr")
+          setResult("First Login In")
        }
    }
   return (
